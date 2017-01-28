@@ -26,3 +26,30 @@ c:\users\sanya\documents\visual studio 2015\Projects\TestProject\WebAPI\bin\Syst
 c:\users\sanya\documents\visual studio 2015\Projects\TestProject\WebAPI\bin\System.Web.Http.WebHost.xml
 c:\users\sanya\documents\visual studio 2015\Projects\TestProject\WebAPI\obj\Debug\WebAPI.dll
 c:\users\sanya\documents\visual studio 2015\Projects\TestProject\WebAPI\obj\Debug\WebAPI.pdb
+D:\Test\TestProject\WebAPI\bin\roslyn\csc.exe
+D:\Test\TestProject\WebAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Test\TestProject\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Test\TestProject\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Test\TestProject\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Test\TestProject\WebAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Test\TestProject\WebAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Test\TestProject\WebAPI\bin\roslyn\System.Collections.Immutable.dll
+D:\Test\TestProject\WebAPI\bin\roslyn\System.Reflection.Metadata.dll
+D:\Test\TestProject\WebAPI\bin\roslyn\vbc.exe
+D:\Test\TestProject\WebAPI\bin\roslyn\VBCSCompiler.exe
+D:\Test\TestProject\WebAPI\bin\roslyn\VBCSCompiler.exe.config
+D:\Test\TestProject\WebAPI\bin\WebAPI.dll.config
+D:\Test\TestProject\WebAPI\bin\WebAPI.dll
+D:\Test\TestProject\WebAPI\bin\WebAPI.pdb
+D:\Test\TestProject\WebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Test\TestProject\WebAPI\bin\Newtonsoft.Json.dll
+D:\Test\TestProject\WebAPI\bin\System.Net.Http.Formatting.dll
+D:\Test\TestProject\WebAPI\bin\System.Web.Http.dll
+D:\Test\TestProject\WebAPI\bin\System.Web.Http.WebHost.dll
+D:\Test\TestProject\WebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Test\TestProject\WebAPI\bin\Newtonsoft.Json.xml
+D:\Test\TestProject\WebAPI\bin\System.Net.Http.Formatting.xml
+D:\Test\TestProject\WebAPI\bin\System.Web.Http.xml
+D:\Test\TestProject\WebAPI\bin\System.Web.Http.WebHost.xml
+D:\Test\TestProject\WebAPI\obj\Debug\WebAPI.dll
+D:\Test\TestProject\WebAPI\obj\Debug\WebAPI.pdb
