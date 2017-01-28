@@ -42,20 +42,15 @@ declare namespace angular.resource {
         (url: string, paramDefaults?: any,
             /** example:  {update: { method: 'PUT' }, delete: deleteDescriptor }
              where deleteDescriptor : IActionDescriptor */
-            actions?: IActionHash, options?: IResourceOptions): IResourceClass<IResource<any>>;
+            actions?: any, options?: IResourceOptions): IResourceClass<IResource<any>>;
         <T, U>(url: string, paramDefaults?: any,
             /** example:  {update: { method: 'PUT' }, delete: deleteDescriptor }
              where deleteDescriptor : IActionDescriptor */
-            actions?: IActionHash, options?: IResourceOptions): U;
+            actions?: any, options?: IResourceOptions): U;
         <T>(url: string, paramDefaults?: any,
             /** example:  {update: { method: 'PUT' }, delete: deleteDescriptor }
              where deleteDescriptor : IActionDescriptor */
-            actions?: IActionHash, options?: IResourceOptions): IResourceClass<T>;
-    }
-
-    // Hash of action descriptors allows custom action names
-    interface IActionHash {
-        [action: string]: IActionDescriptor
+            actions?: any, options?: IResourceOptions): IResourceClass<T>;
     }
 
     // Just a reference to facilitate describing new actions
@@ -100,7 +95,7 @@ declare namespace angular.resource {
         (params: Object, data: Object, success?: Function, error?: Function): IResourceArray<T>;
     }
 
-    // Baseclass for every resource with default actions.
+    // Baseclass for everyresource with default actions.
     // If you define your new actions for the resource, you will need
     // to extend this interface and typecast the ResourceClass to it.
     //
@@ -118,7 +113,7 @@ declare namespace angular.resource {
     // Also, static calls always return the IResource (or IResourceArray) retrieved
     // https://github.com/angular/angular.js/blob/v1.2.0/src/ngResource/resource.js#L538-L549
     interface IResourceClass<T> {
-        new(dataOrParams? : any) : T & IResource<T>;
+        new(dataOrParams? : any) : T;
         get: IResourceMethod<T>;
 
         query: IResourceArrayMethod<T>;
@@ -165,8 +160,6 @@ declare namespace angular.resource {
      * Really just a regular Array object with $promise and $resolve attached to it
      */
     interface IResourceArray<T> extends Array<T & IResource<T>> {
-        $cancelRequest(): void;
-
         /** the promise of the original server interaction that created this collection. **/
         $promise : angular.IPromise<IResourceArray<T>>;
         $resolved : boolean;
@@ -192,12 +185,6 @@ declare namespace angular {
     interface IModule {
         /** creating a resource service factory */
         factory(name: string, resourceServiceFactoryFunction: angular.resource.IResourceServiceFactoryFunction<any>): IModule;
-    }
-
-    namespace auto {
-    	interface IInjectorService {
-    		get(name: '$resource'): ng.resource.IResourceService;
-    	}
     }
 }
 

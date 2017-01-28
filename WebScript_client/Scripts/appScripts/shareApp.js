@@ -2,7 +2,6 @@ define(["require", "exports", "mainControllers"], function (require, exports, ma
     "use strict";
     var shareApp = (function () {
         function shareApp() {
-            debugger;
             var ngApp = angular.module('shareApp', ["ngRoute", "ngSanitize", "ui.bootstrap", "mainControllers"]);
             var mainCtrls = new mainCtrlsModule.mainControllers();
         }

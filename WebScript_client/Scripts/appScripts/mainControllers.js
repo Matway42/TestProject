@@ -1,21 +1,13 @@
-define(["require", "exports", "UserModel"], function (require, exports, UserModel) {
+define(["require", "exports", "serviceHandler", "userController", "configRouter"], function (require, exports, serviceModule, userController, routerModule) {
     "use strict";
     var mainControllers = (function () {
         function mainControllers() {
             var app = angular.module("mainControllers", []);
-            app.controller('MainController', function ($scope, $location, $http) {
-                $scope.users = new Array();
-                $http.get('http://localhost:51095/api/user')
-                    .then(function (res) {
-                    var users = res.data;
-                    for (var i = 0; i < users.length; i++) {
-                        var user = new UserModel();
-                        user.name = users[i].Name;
-                        user.lastName = users[i].LastName;
-                        $scope.users.push(user);
-                    }
-                });
-            });
+            var router = new routerModule.configRouter();
+            app.config(router.configure);
+            var serviceHandler = new serviceModule.serviceHandler();
+            var serviceMod = app.factory("services", ["$http", serviceModule.exportService]);
+            app.controller('MainController', function (services) { return new userController.userController(services, serviceHandler); });
         }
         return mainControllers;
     }());

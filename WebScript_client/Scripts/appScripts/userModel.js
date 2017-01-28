@@ -7,4 +7,4 @@ define(["require", "exports"], function (require, exports) {
     }());
     return UserModel;
 });
-//# sourceMappingURL=UserModel.js.map
+//# sourceMappingURL=userModel.js.map

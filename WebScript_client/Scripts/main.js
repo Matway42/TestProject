@@ -1,9 +1,9 @@
 requirejs.config({
     baseUrl: "Scripts/appScripts",
     paths: {
-        "jquery": "../jquery-2.2.0.min",
+        "jquery": "../jquery-3.1.1.min",
         "bootstrap": "../bootstrap",
-        "app": "./mainControllers",
+        "app": "./shareApp",
         "angular": "../angular",
         "ngRoute": "../angular-route",
         "ngSanitize": "../angular-sanitize",
@@ -11,9 +11,7 @@ requirejs.config({
         "loginCtrl": "./loginController",
         "routerCfg": "./configRouter",
         "serviceFactory": "./serviceHandler",
-        "productContoller": "./productContoller",
-        "ui.bootstrap": "../angular-ui/ui-bootstrap-tpls",
-        "UserModel": "UserModel"
+        "ui.bootstrap": "../angular-ui/ui-bootstrap-tpls"
     },
     shim: {
         "ngRoute": ['angular'],
@@ -22,10 +20,10 @@ requirejs.config({
         "bootstrap": ['jquery']
     }
 });
-requirejs(["app", "bootstrap", "angular", "ngRoute", "ngSanitize", "ui.bootstrap", "mainControllers"], function (app) {
-    var mainControllers = new app.mainControllers();
+requirejs(["app", "bootstrap", "angular", "ngRoute", "ngSanitize", "ui.bootstrap"], function (app) {
+    var shareApp = new app.shareApp();
     angular.element(document).ready(function () {
-        angular.bootstrap(document, ['mainControllers']);
+        angular.bootstrap(document, ['shareApp']);
     });
 });
 //# sourceMappingURL=main.js.map
